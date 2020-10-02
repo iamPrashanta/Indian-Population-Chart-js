@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart js testing</title>
+</head>
+<body>
+<h2 style="color: gray; text-align: center;">Indian Population Chart</h2>
+<canvas id="myChart" style=""></canvas>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var AndhraPradesh = 49386799;
+
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: [
+            'Andhra Pradesh',
+            'Arunachal Pradesh',
+            'Assma',
+            'Bihar',
+            'Chhattisgarh',
+
+            'Goa',
+            'Gujarat',
+            'Haryana',
+            'Himachal Pradesh',
+            'Jharkhand',
+
+            'Karnataka',
+            'Kerala',
+            'Madhya Pradesh',
+            'Maharashtra',
+            'Manipur',
+
+            'Meghalaya',
+            'Mizoram',
+            'Nagaland',
+            'Odisha',
+            'Punjab',
+
+            'Rajasthan',
+            'Sikkim',
+            'Tamil Nadu',
+            'Telengana',
+            'Tripura',
+
+            'Uttar Pradesh',
+            'Uttarakhand',
+            'West Bengal'
+        ],
+        datasets: [{
+            label: 'Population',
+            data:[
+                    AndhraPradesh,
+                    1382611,
+                    31169272,
+                    103804637,
+                    25540196,
+
+                    1457723,
+                    60383628,
+                    25353081,
+                    6864602,
+                    32966238,
+
+                    61130704,
+                    33387677,
+                    72597565,
+                    112372972,
+                    2721756,
+                    
+                    2964007,
+                    1091014,
+                    1980602,
+                    41947358,
+                    27704236,
+
+                    68621012,
+                    607688,
+                    72138958,
+                    35286757,
+                    3671032,
+
+                    199812341,
+                    10116752,
+                    91347736,
+
+                ],
+            // backgroundColor: [
+            //     'rgba(255, 99, 132, 0.2)',
+            //     'rgba(54, 162, 235, 0.2)',
+            //     'rgba(255, 206, 86, 0.2)',
+            //     'rgba(75, 192, 192, 0.2)',
+            //     'rgba(153, 102, 255, 0.2)',
+            //     'rgba(255, 159, 64, 0.2)'
+            // ],
+            // borderColor: [
+            //     'rgba(255, 99, 132, 1)',
+            //     'rgba(54, 162, 235, 1)',
+            //     'rgba(255, 206, 86, 1)',
+            //     'rgba(75, 192, 192, 1)',
+            //     'rgba(153, 102, 255, 1)',
+            //     'rgba(255, 159, 64, 1)'
+            // ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        events: ['click']
+    }
+});
+</script>
+
+
+
+</body>
+</html>
